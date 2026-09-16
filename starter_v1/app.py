@@ -37,7 +37,7 @@ def load_setup():
 st.title("🎧 IT Helpdesk Agent")
 with st.sidebar:
     st.markdown("### ℹ️ Thông tin hệ thống")
-    st.info("Phiên bản Artifact: v2")
+    st.info("Phiên bản Artifact: v1")
     st.success("Provider: Gemini")
 system_prompt, openai_tools, provider = load_setup()
 

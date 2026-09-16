@@ -7,16 +7,17 @@
 
 ## Team
 
-- Team:
+- Team:Nhomban2
 - Thành viên và INDIVIDUAL: [TEAM.md](../../TEAM.md)
-- Members:
-- Provider/model:
+- Members: Dương Hải Minh, Lê Minh Hiếu, Đào Thị Huyền, Đỗ Trương Thành Ân.
+- Provider/model: Gemini
 
 # PHẦN A — Giới thiệu agent
 
 ## A1. Agent này làm được gì
 
 > Viết 1–2 câu mô tả capability và giới hạn của agent.
+Agent IT Helpdesk này có khả năng tra cứu tài liệu nội bộ, chẩn đoán trạng thái thiết bị/dịch vụ, tìm kiếm người dùng và hỗ trợ tạo ticket tự động. Tuy nhiên, Agent bị giới hạn ở việc chỉ có thể thao tác thông qua các công cụ đã được phân quyền (chủ yếu là tra cứu và ghi nhận), không thể trực tiếp can thiệp sửa lỗi hệ thống hay thực hiện các yêu cầu nằm ngoài nghiệp vụ IT.
 
 **Link dùng thử:**
 
@@ -26,14 +27,21 @@
 
 | Tool | Chức năng | Core / optional / team-built |
 |---|---|---|
-| clarify | Hỏi bổ sung hoặc xác nhận | core |
-|  |  |  |
+| clarify | Gửi một câu hỏi bổ sung hoặc xác nhận cho người dùng | core |
+| search_kb | Tìm hướng dẫn hỗ trợ kỹ thuật | core |
+| check_service_status | Kiểm tra trạng thái một dịch vụ | core |
+| inspect_device | Kiểm tra thông tin và chẩn đoán thiết bị | core |
+| lookup_user | Tra cứu người dùng trong danh bạ hỗ trợ | core |
+| format_incident_report | Trình bày các kết quả đã có thành báo cáo | core |
+| search_device_info | Tìm thông tin công khai về một model thiết bị trên web | optional |
+| policy | Tìm trong chính sách IT nội bộ | optional |
+| create_ticket | Tạo một ticket hỗ trợ | optional |
 
 ## A3. Câu hỏi mẫu
 
-1.
-2.
-3.
+1. Kiểm tra giúp tôi xem hệ thống VPN trên môi trường production có đang gặp sự cố không?
+2. Máy tính của tôi (mã tài sản: LT-042) bị lỗi không mở được phần mềm, bạn có thể kiểm tra và tạo ticket hỗ trợ mức độ high giúp tôi được không?
+3. Quy định của công ty về việc bảo mật dữ liệu (data privacy) khi làm việc từ xa là gì?
 
 ## A4. Kịch bản demo đã rehearse
 
