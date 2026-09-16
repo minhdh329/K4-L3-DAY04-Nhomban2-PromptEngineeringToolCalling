@@ -75,7 +75,16 @@ Liệt kê đúng 10 case tự viết: 5 single-turn và 5 multi-turn.
 
 | Case ID | What it tests | Expected behavior | Result |
 |---|---|---|---|
-|  |  |  |  |
+| `GRP01_single_check_service` | Bắt đúng tên tool và tham số enum | Gọi `check_service_status` | Pass |
+| `GRP02_single_lookup_user` | Sử dụng đúng tool tìm kiếm người dùng | Gọi `lookup_user` | Pass |
+| `GRP03_single_missing_asset` | Không gọi tool khi thiếu mã tài sản | `no_tool` | Pass |
+| `GRP04_single_policy` | Chọn tool chính sách và truyền đúng enum | Gọi `policy` | Pass |
+| `GRP05_single_out_of_scope` | Từ chối yêu cầu ngoài phạm vi Helpdesk | `no_tool` | Pass |
+| `GRP06_multi_context_update` | Kết hợp tham số từ nhiều lượt chat | Gọi `search_device_info` | Pass |
+| `GRP07_multi_cancel_request` | Nhận diện ý định hủy yêu cầu từ user | `no_tool` | Pass |
+| `GRP08_multi_missing_info_provided` | Gọi tool khi user bổ sung đủ tham số | Gọi `inspect_device` | Pass |
+| `GRP09_multi_boundary` | Phân định ranh giới (từ chối gọi điện) | Gọi `search_kb` | Pass |
+| `GRP10_multi_complex_ticket` | Tổng hợp thông tin rải rác để tạo ticket | Gọi `create_ticket` | Pass |
 
 ## B4. Live chat evidence
 
@@ -154,7 +163,7 @@ repository chung:
 
 **URL repository chung dùng để nộp:**
 
-> URL:
+> URL: https://github.com/minhdh329/K4-L3-DAY04-Nhomban2-PromptEngineeringToolCalling
 
 - [ ] Tên repo đúng mẫu K4-L3-DAY04-HoVaTen-MSSV-PromptEngineeringToolCalling.
 - [ ] Kiểm tra deadline và bản chốt theo [SUBMISSION.md](../../SUBMISSION.md).
